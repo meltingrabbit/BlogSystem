@@ -25,6 +25,9 @@ sub GenerateList {
 	# p.textの文字数を動的に変更するjavascriptへ渡すための配列
 	my @Texts = ();
 
+	# ページ遷移ボタンを表示するか？
+	my $isDisplayButton = 1;
+
 
 	########################################
 	# 不正な引数を弾く
@@ -84,6 +87,7 @@ EOM
 	} else {
 		if ($target eq 'popular') {
 			print '	<title>溶けかけてるうさぎ - BLOG - POPULAR ARTICLES</title>', "\n";
+			$isDisplayButton = 0;
 		} else {
 			print '	<title>溶けかけてるうさぎ - BLOG</title>', "\n";
 		}
@@ -265,6 +269,7 @@ EOM
 	for (my $i = $SETTING{'row'} * ($page-1); $i < $SETTING{'row'} * ($page); $i++) {
 		if ($articleNum == 0) {
 			&sub::GenerateList::GenerateNullPanel();
+			$isDisplayButton = 0;
 			last;
 		}
 		if ($i > $#ArticleListsSelected) {
@@ -277,23 +282,28 @@ EOM
 	}
 
 
+	if ($isDisplayButton) {
 print <<'EOM';
 	<div id="goBackButton" class="clearfix">
 EOM
-	# ぼたん
-	if ($page > 1) {
-		print '<a href="./?c='.$class.'&t='.$target.'&p='.($page-1).'" id="backButton" class="left button"><<前のページ</a>' ,"\n";
-	} else {
-		print '<div class="disable left"></div>', "\n";
-	}
-	print '<div class="page left">'.$page.' / '.$pageNum.'</div>' ,"\n";
-	if ($page < $pageNum) {
-		print '<a href="./?c='.$class.'&t='.$target.'&p='.($page+1).'" id="goButton" class="right button">次のページ >></a>' ,"\n";
-	} else {
-		print '<div class="disable right"></div>', "\n";
-	}
+		# ぼたん
+		if ($page > 1) {
+			print '<a href="./?c='.$class.'&t='.$target.'&p='.($page-1).'" id="backButton" class="left button"><<前のページ</a>' ,"\n";
+		} else {
+			print '<div class="disable left"></div>', "\n";
+		}
+		print '<div class="page left">'.$page.' / '.$pageNum.'</div>' ,"\n";
+		if ($page < $pageNum) {
+			print '<a href="./?c='.$class.'&t='.$target.'&p='.($page+1).'" id="goButton" class="right button">次のページ >></a>' ,"\n";
+		} else {
+			print '<div class="disable right"></div>', "\n";
+		}
 print <<'EOM';
 	</div>
+EOM
+	}
+
+print <<'EOM';
 </div>
 
 <footer>
