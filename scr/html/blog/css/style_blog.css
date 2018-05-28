@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #333;	/*全体の文字色*/
+	/*font-family: "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	フォント種類*/
+	/*font-family: "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	フォント種類*/
+	/*font-size: 14px;	文字サイズ*/
+	/*font-size: 14px;*/
+	/*line-height: 2;		行間*/
+	/*line-height: 2;*/
+	background: #eee;	/*背景色*/
+}
+
+noscript {
+	/*background-color: white;*/
+	background-color: rgba(255,255,255,0.9);
+	position: fixed;
+	/*top: 100px;*/
+	top: 20px;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;
+}
+noscript>div {
+	width: 100%;
+	height: 100%;
+	font-size: 30px;
+	display: table;
+}
+noscript>div>p {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+nav {
+	width: 100%;
+	min-width: 960px;
+	background-color: #000;
+	text-align: center;
+}
+#menubar a {
+	color: #fff;
+}
+#menubar a:hover {
+	color: #bbb;
+}
+#menubar li {
+	/*display: inline;	横並びにする設定*/
+	display: inline-block;
+	width: 150px;
+	font-size: 14px;
+	color: #fff;
+	padding-top: 40px;
+}
+/*#menubar > a {
+	display: inline-block;
+}*/
+#menubar img {
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	display: inline-block;
+	/*width: 400px;*/
+	height: 58px;
+}
+
+
+#container {
+	/*height: 1000px;*/
+	margin-top: 40px;
+	/*background-color: yellow;*/
+	background-color: inherit;
+	/*padding: 0 5px;*/
+	padding: 0 0px;
+	box-sizing: border-box;
+}
+
+#sideMenu {
+	width: 260px;
+	/*height: 400px;*/
+	/*background-color: green;*/
+	background-color: inherit;
+}
+#sideMenu h2 {
+	background-color: #fff;
+	font-size: 16px;
+	padding: 5px 10px;
+}
+#sideMenu a {
+	display: block;
+	background-color: inherit;
+	font-size: 13px;
+	border-bottom: 1px solid #ddd;
+	margin: 0 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	line-height: 1.3;
+	color: inherit;
+}
+#sideMenu a.sm-recent {
+	font-size: 12px;
+}
+#sideMenu a.h3 {
+	margin-left: 30px;
+	font-size: 12px;
+	padding-top: 6px;
+	padding-bottom: 3px;
+}
+#sideMenu a:hover {
+	background-color: #ffccff;
+	/*background-color: #FFE177;*/
+	text-decoration: underline;
+}
+#sideMenu a.current {
+	background-color: #ffccff;
+}
+#sideMenu a ~ h2,
+/*#sideMenu > div > h2 {*/
+#sideMenu > div {
+	/* divを挟んでいるのはfixedContents用 */
+	margin-top: 20px;
+}
+#sideMenu > div#fixedContents {
+	width: 260px;
+}
+#sideMenu > div#fixedContents.fixed {
+	position: fixed;
+	top: 0;
+	/*z-index: 1;*/
+}
+#sideMenu > div#tagList {
+	margin: 0;
+	margin-top: 4px; /* aのpadding-topと足して10px（#sideMenu a のpadding-topと同じ） */
+	padding: 0 7px;		/* marginと足して10pxにする */
+}
+#sideMenu > div#tagList a {
+	margin: 0 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 12px;
+	padding-top: 6px;
+	padding-bottom: 3px;
+}
+
+#contents {
+	box-sizing: border-box;
+	width: 680px;
+	/*height: 400px;*/
+	/*background-color: blue;*/
+}
+#contents p,
+#contents table {
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+
+footer {
+	clear: both;
+	text-align: center;	/*文字をセンタリング*/
+	padding: 10px 0px;	/*左から、上下、左右への余白*/
+	color: #333;		/*文字色*/
+	font-size: 10px;
+}
+footer a {
+	text-decoration: none;
+	border: none;
+	color: #333;	/*文字色*/
+}
+
+
+
+
+.w960 {
+	width: 960px;
+	margin: 0 auto;
+}
+
+/*スマホ版はとりあえずいいや...*/
+
+@media only screen and (max-width: 640px) {
+/*@media only screen and (max-width: 1000px) {*/
+
+
+
+	.PC {
+		/*display: none !important;*/
+	}
+
+	.SP {
+		display: block !important;
+	}
+
+}
+
+@media screen and (max-width: 640px) {
+
+
+	.PC {
+		/*display: none !important;*/
+	}
+
+	.SP {
+		display: block !important;
+	}
+
+}
+
+
+@media screen and (min-width: 641px) {
+/*@media screen and (min-width: 1001px){*/
+
+	.PC {
+		display: block !important;
+	}
+
+	.SP {
+		display: none !important;
+	}
+
+}
+

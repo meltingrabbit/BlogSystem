@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+
+#contents a {
+	color: #333;
+	/*border-bottom: 1px dotted #E3E3E3;*/
+	border-bottom: 1px dotted #CCC;
+	/*border-bottom: 1px dotted #000000;*/
+	/*text-decoration: underline dotted #E3E3E3;*/
+	/*text-decoration: underline dotted #aaa;*/
+	/*text-decoration: underline dashed #E3E3E3;*/
+}
+#contents a:hover {
+	/*border-bottom: 0px;*/
+	/*text-decoration: underline;*/
+	border-bottom: 1px solid #000;
+}
+
+
+
+/*スマホ版はとりあえずいいや...*/
+
+@media only screen and (max-width: 640px) {
+/*@media only screen and (max-width: 1000px) {*/
+
+}
+
+@media screen and (max-width: 640px) {
+
+}
+
+
+@media screen and (min-width: 641px) {
+
+}
+

@@ -1,0 +1,475 @@
+@charset "utf-8";
+
+
+#contents {
+	padding: 13px;
+	background-color: #fff;
+}
+/*#contents p {
+	font-size: 15px;
+	line-height: 1.6;
+}
+*/
+
+#contents code {
+	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+
+#contents p code,
+#contents table code {
+/*:not(#abstract p) code {*/
+	font-size: 90%;
+	margin: 0 2px;
+	/*padding: 0 5px;*/
+	padding: 0 4px;
+	border: 1px solid rgba(0,0,0,.08);
+	background-color: rgba(0,0,0,.03);
+	border-radius: 3px;
+}
+/* 上記スタイルのキャンセル */
+#contents #abstract code {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	border-style: none;
+	background-color: transparent;
+}
+
+
+#contents #headline img {
+	display: block;
+	/*width: 600px;*/
+	width: 100%;
+	margin-bottom: 20px;
+	/*margin: 0 auto;*/
+}
+#contents #headline ul {
+	line-height: 1.6;
+}
+#contents #headline ul a {
+	display: inline-block;
+	line-height: 1;
+}
+#contents #headline li {
+	display: inline-block;
+	/*display: inline;*/
+	padding: 3px 3px;
+	margin: 0px 4px;
+	background-color: #F4B5CA;
+	color: #fff;
+	font-size: 12px;
+	line-height: 1;
+	border: 1px solid #F4B5CA;
+	/*box-sizing: border-box;*/
+}
+#contents #headline li.tag {
+	background-color: inherit;
+	color: #F4B5CA;
+	font-weight: bold;
+	/*border: 1px solid #F4B5CA;*/
+}
+/*#contents #headline a,
+#contents #headline a::before,
+#contents #headline a::after,*/
+#contents #headline li,
+#contents #headline li::before,
+#contents #headline li::after {
+	/*-webkit-box-sizing: border-box;*/
+	/*-moz-box-sizing: border-box;*/
+	/*box-sizing: border-box;*/
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+/*#contents #headline a:hover,*/
+#contents #headline li:hover {
+	/*background-color: #ffccff;*/
+	/*background-color: #bbb;*/
+	background-color: #ddd;
+	border: 1px solid #F4B5CA;
+}
+/*
+2017/09/18
+p→h1に変更．
+google検索の記事タイトルが，h2のものが現れたため．
+*/
+#contents #headline p.title,
+#contents #headline h1.title {
+	font-size: 26px;
+	font-weight: bold;
+	line-height: 1.3;
+	padding-top: 10px;
+	padding-bottom: 2px;
+
+	/* p→h1に伴い追加 */
+	margin-bottom: 2px;
+}
+#contents #headline .date p {
+	/*padding-top: 5px;*/
+	font-size: 13px;
+	color: #666;
+	padding-right: 3px;
+}
+
+#contents #abstract {
+	box-sizing: border-box;
+	width: 100%;
+	background-color: #eee;
+	/*padding: 20px;*/
+	padding: 3%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	/*border: 2px solid #000;*/
+}
+
+#contents p {
+	color: #333;
+	margin-bottom: 2px;
+}
+#contents td {
+	color: #333;
+	padding-bottom: 2px;
+}
+#contents span.del {
+	text-decoration: line-through;
+}
+
+#contents a {
+	color: #333;
+	/*border-bottom: 1px dotted #E3E3E3;*/
+	border-bottom: 1px dotted #CCC;
+	/*border-bottom: 1px dotted #000000;*/
+	/*text-decoration: underline dotted #E3E3E3;*/
+	/*text-decoration: underline dotted #aaa;*/
+	/*text-decoration: underline dashed #E3E3E3;*/
+}
+#contents a:hover {
+	/*border-bottom: 0px;*/
+	/*text-decoration: underline;*/
+	border-bottom: 1px solid #000;
+}
+#contents #headline ul a,
+#contents #headline ul a:hover {
+	border-bottom: 0px;
+}
+
+#contents h2 {
+	border-left: 6px solid #eee;
+	/*border-left: 6px solid #ddd;*/
+	border-bottom: 2px solid #eee;
+	/*border-bottom: 2px solid #ddd;*/
+	padding-left: 8px;
+	padding-top: 4px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 35px;
+	margin-bottom: 15px;
+}
+#contents h3 {
+	line-height: 1.1;
+	padding: 0 8px;
+	margin: 15px 2px;
+	margin-top: 25px;
+	border-bottom: 1px solid #eee;
+	/*border-bottom: 1px solid #ddd;*/
+	font-size: 17px;
+	font-weight: bold;
+	/*font-weight: normal;*/
+}
+
+#contents h5 {
+	font-weight: normal;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 30px;
+}
+#contents > img {
+	display: block;
+	/*width: 80%;*/
+	width: 600px;
+	margin: 30px auto;
+	margin-bottom: 0;
+}
+#contents > img.portrait {
+	/*width: 20px;*/
+	width: auto;
+	height: 600px;
+}
+#contents > p {
+	padding: 0 10px;
+}
+
+#contents > div.syntaxhighlighter {
+	margin-bottom: 0 !important;
+	/*border: solid 1px #bbb !important;*/
+	border: solid 1px #eee !important;
+	margin-right: auto !important;
+	margin-left: auto !important;
+}
+#contents > img + p {
+	margin-top: 30px;
+}
+#contents > div.syntaxhighlighter + p {
+	/*margin-top: 20px;*/
+	margin-top: 1em;
+}
+#contents div.syntaxhighlighter {
+	font-size: 14px !important;
+}
+/*英単語の途中でも折り返す*/
+/*#contents > div.syntaxhighlighter table * {*/
+/*#contents > div.syntaxhighlighter:last-of-type table * {*/
+/*#contents > div.syntaxhighlighter:last-child table * {*/
+/*.syntaxhighlighter table * {*/
+#contents > .next-word-break + .syntaxhighlighter table * {
+/*.syntaxhighlighter table td code {*/
+	/*word-wrap: break-word;*/
+	word-break: break-all;
+	/*background-color: blue !important;*/
+}
+div[id^="highlighter"]  {
+	word-break: break-all;
+}
+#contents>table {
+	margin: 0 10px;
+}
+
+/* 引用でURLが長いと飛びてでしまうのを回避 */
+#contents>table.bracket {
+	word-break: break-all;
+
+	/*
+	http://qiita.com/yuji38kwmt/items/ba8d59eb0abef1956bae
+	widthなどの指定がないと，効かないらしい．
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	*/
+}
+/* 本文中のパスなどが飛び出てしまうのを回避 */
+#contents>p>code {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+
+/* MathJax用 */
+/*#contents span.MathJax,
+#contents div.MathJax_Display {*/
+/*#contents span.MathJax {*/
+/*#contents span.MathJax {*/
+/* 文章中内（\(hoge\)内）のフォントサイズ調整 */
+#contents>p>span.MathJax {
+	font-size: 14px;
+	/*font-size:80%;*/
+	padding-right: 4px;
+}
+/*#contents>span.MathJax_Preview,*/
+/*#contents>div.MathJax_Display {*/
+#contents>div.MathJax_Display nobr>span {
+	/*font-size: 120%;*/
+	/* tag（式番号）がはみ出ないように */
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+	box-sizing: border-box !important;
+	/*width: 70% !important;*/
+}
+
+/* 文字サイズの調整 */
+#contents .font-size {
+}
+
+/* 字下げ */
+#contents .indent {
+}
+
+/* 引用 */
+#contents > div.quote {
+	/*border-left: 2px solid #eee;*/
+	border-left: 2px solid #bbb;
+	margin: 10px 0;
+	margin-left: 20px;
+	padding: 0 10px;
+	/*padding-left: 30px;*/
+	font-size: 13px;
+}
+#contents > div.quote p,
+#contents > div.quote table {
+	font-size: 13px;
+}
+
+/* unordered list */
+#contents table.my-ul {
+	margin: 0 10px;
+	margin-left: 20px;
+}
+#contents table.my-ul tr td {
+	text-align: left;
+	vertical-align: top;
+}
+#contents table.my-ul tr td:first-child {
+	width: 20px;
+	min-width: 20px;
+}
+
+/* ordered list */
+#contents table.my-ol {
+	margin: 0 10px;
+	margin-left: 20px;
+}
+#contents table.my-ol tr td {
+	text-align: left;
+	vertical-align: top;
+}
+#contents table.my-ol tr td:first-child {
+	width: 25px;
+	min-width: 25px;
+}
+
+/* 出典などの[1]描画 */
+#contents table.bracket {
+	margin: 0 10px;
+}
+#contents table.bracket tr td {
+	text-align: left;
+	vertical-align: top;
+}
+#contents table.bracket tr td:first-child {
+	width: 35px;
+	min-width: 35px;
+}
+
+/* twitter引用用 */
+#contents div.my-twitter {
+	width: 100%;
+	/*background-color: yellow;*/
+	/*margin-left: 20px !important;*/
+}
+/*#contents div.my-twitter > twitterwidget {*/
+#contents div.my-twitter > div.my-twitter-inner {
+	display: table;
+	margin: 0 auto;
+	/*background-color: blue;*/
+}
+
+/* 取り消し線 */
+/*.my-delete {
+	text-decoration: line-through;
+}*/
+
+#contents > div.iframe {
+	margin: 0 auto;
+}
+
+#contents div.gmap {
+	/*margin: 0 auto;*/
+	margin: 30px auto;
+	display: table;
+}
+
+
+#contents #comment {
+	box-sizing: border-box;
+	width: 100%;
+	background-color: #eee;
+	/*padding: 20px;*/
+	/*padding: 3%;*/
+	padding: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	/*border: 2px solid #000;*/
+}
+#contents #comment h3 {
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 15px;
+	padding: 0;
+	margin: 15px 0;
+	margin-top: 5px;
+	border-width: 0;
+}
+#contents #comment p {
+	padding: 0 3px;
+}
+#contents #comment p span.note {
+	font-size: 12px;
+}
+#contents #comment input,
+#contents #comment textarea {
+
+	/*chromeのデフォルト削除*/
+	/* http://webdesignmagazine.net/html-css/google-chrome_outline/ */
+	outline: none;
+
+	font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Verdana, "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
+
+	border:0;
+	padding:4px;
+	/*font-size:1.3em;*/
+	/*color:#aaa;*/
+	border:solid 1px #ccc;
+	margin:0 0 20px;
+	/*width:300px;*/
+	/*-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;*/
+	-moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+	-webkit-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+
+	box-sizing: border-box;
+	width: 100%;
+}
+#contents #comment input:focus,
+#contents #comment textarea:focus,
+#contents #comment .button:hover {
+	border:solid 1px #EEA34A;
+}
+}
+#contents #comment input {
+	/*width: 100%;*/
+}
+#contents #comment textarea {
+	/*width: 100%;*/
+	height: 80px;
+}
+button {
+	font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Verdana, "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+	appearance: none;
+}
+#contents #comment .button {
+	display: block;
+	cursor: pointer;
+	box-sizing: border-box;
+	width: 100%;
+	height: 30px;
+	background-color: #fff;
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+
+
+
+
+/*スマホ版はとりあえずいいや...*/
+
+@media only screen and (max-width: 640px) {
+/*@media only screen and (max-width: 1000px) {*/
+
+}
+
+@media screen and (max-width: 640px) {
+
+}
+
+
+@media screen and (min-width: 641px) {
+
+}
+
