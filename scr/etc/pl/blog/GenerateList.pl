@@ -3,7 +3,7 @@ use utf8;
 package sub::blog;
 sub GenerateList {
 	my $class  = $_[0];		# class none/archive/category/tag
-	my $target = $_[1];		# タグ，カテゴリ等
+	my $target = $_[1];		# タグ，カテゴリ or recent/popular
 	my $page   = $_[2];		# 生成するページ
 
 	my $DIR = "../";		# サイト全体におけるこのページの階層
@@ -82,7 +82,11 @@ EOM
 	} elsif ($class eq 'archive') {
 		print '	<title>溶けかけてるうさぎ - BLOG - ARCHIVE '.$target.'</title>', "\n";
 	} else {
-		print '	<title>溶けかけてるうさぎ - BLOG</title>', "\n";
+		if ($target eq 'popular') {
+			print '	<title>溶けかけてるうさぎ - BLOG - POPULAR ARTICLES</title>', "\n";
+		} else {
+			print '	<title>溶けかけてるうさぎ - BLOG</title>', "\n";
+		}
 	}
 print <<'EOM';
 	<meta name="format-detection" content="telephone=no">
@@ -186,9 +190,15 @@ EOM
 			}
 		}
 	} else {
-		# 全記事表示のため，なにも削除しない
-		# 参照渡しswapにしたいな...？
-		@ArticleListsSelected = @ArticleLists;
+		if ($target eq 'popular') {
+			foreach my $id (@{$SETTING{'popular_articles'}}) {
+				$ArticleListsSelected[$#ArticleListsSelected + 1] = $ArticleLists[%ID2IDX{$id}];
+			}
+		} else {
+			# 全記事表示のため，なにも削除しない
+			# 参照渡しswapにしたいな...？
+			@ArticleListsSelected = @ArticleLists;
+		}
 	}
 
 	my $articleNum = 0;
@@ -244,7 +254,11 @@ EOM
 	} elsif ($class eq 'archive') {
 		print '<h2>ARCHIVE '.$target.'</h2>', "\n";
 	} else {
-		print '<h2>RECENT ARTICLES</h2>', "\n";
+		if ($target eq 'popular') {
+			print '<h2>POPULAR ARTICLES</h2>', "\n";
+		} else {
+			print '<h2>RECENT ARTICLES</h2>', "\n";
+		}
 	}
 
 	# 記事リンクをforで生成

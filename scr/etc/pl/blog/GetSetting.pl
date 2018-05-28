@@ -10,6 +10,13 @@ sub GetSetting {
 	$SETTING{'begin_year'} = 2016;
 	$SETTING{'end_year'} = 2018;
 
+	$SETTING{'popular_articles'} = [			# 人気記事一覧（Todo : 動的に作るように）
+		2017121801,
+		2017041301,
+		2018010901,
+		2018032302
+	];
+
 
 	# %CATEGORY, %TAG, yearのkeyは重複禁止
 	# %TAGは接頭辞 t_ を付加．%CATEGORYは数字のみ禁止

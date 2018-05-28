@@ -66,6 +66,7 @@ EOM
 	print '<a href="'.$DIR.'../">溶けかけてるうさぎ HP</a>', "\n";
 	print '<a href="'.$DIR.'">BLOG TOP</a>', "\n";
 	print '<a href="'.$DIR.'">RECENT ARTICLES</a>', "\n";
+	print '<a href="'.$DIR.'?t=popular">POPULAR ARTICLES</a>', "\n";
 	print '<a href="'.$DIR.'about.cgi">ABOUT THIS BLOG</a>', "\n";
 print <<'EOM';
 	<h2>CATEGORY</h2>
