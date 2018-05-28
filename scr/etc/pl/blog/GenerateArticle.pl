@@ -175,12 +175,11 @@ EOM
 	# ulの要素に改行挟むとレイアウトが崩れる．
 	foreach (@{$ArticleLists[$ID2IDX{$id}]{'category'}}) {
 		# print '			<a href="'.$BLOG_DIR.'?c=category&t='.$_.'"><li>'.$SETTING{'category'}{$_}.'</li></a>', "\n";		# liは改行挟むとレイアウト死ぬ
-		# print '<a href="'.$BLOG_DIR.'?c=category&t='.$_.'"><li>'.$SETTING{'category'}{$_}.'</li></a>';
-		print '<a href="'.$BLOG_DIR.'?li&c=category&t='.$_.'"><li>'.$SETTING{'category'}{$_}.'</li></a>';			# 2018/02/06
+		print '<a href="'.$BLOG_DIR.'?li&c=category&t='.$_.'"><li>'.$SETTING{'category'}{$_}.'</li></a>';			# 2018/02/06 liを付加することにより，ログで何処から飛んだかわかる
 	}
 	foreach (@{$ArticleLists[$ID2IDX{$id}]{'tag'}}) {
 		# print '			<a href="'.$BLOG_DIR.'?c=tag&t='.$_.'"><li class="tag">'.$SETTING{'tag'}{$_}.'</li></a>', "\n";		# liは改行挟むとレイアウト死ぬ
-		print '<a href="'.$BLOG_DIR.'?li&c=tag&t='.$_.'"><li class="tag">'.$SETTING{'tag'}{$_}.'</li></a>';		# 2018/02/06
+		print '<a href="'.$BLOG_DIR.'?li&c=tag&t='.$_.'"><li class="tag">'.$SETTING{'tag'}{$_}.'</li></a>';			# 2018/02/06 liを付加することにより，ログで何処から飛んだかわかる
 	}
 # print <<'EOM';
 # 		</ul>
