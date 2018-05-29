@@ -196,7 +196,10 @@ EOM
 	} else {
 		if ($target eq 'popular') {
 			foreach my $id (@{$SETTING{'popular_articles'}}) {
-				$ArticleListsSelected[$#ArticleListsSelected + 1] = $ArticleLists[%ID2IDX{$id}];
+				if (exists($ID2IDX{$id})) {
+					$ArticleListsSelected[$#ArticleListsSelected + 1] = $ArticleLists[$ID2IDX{$id}];
+					# $SETTING{'row'} 以上あっても，１ページめのみなので溢れた分は表示されない．
+				}
 			}
 		} else {
 			# 全記事表示のため，なにも削除しない
