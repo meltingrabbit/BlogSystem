@@ -110,7 +110,7 @@ EOM
 	print '	<link rel="shortcut icon" href="'.$DIR.'img/favicon.ico" type="image/vnd.microsoft.icon">', "\n";
 	print '	<script type="text/javascript" src="'.$DIR.'js/jquery-1.11.2.min.js"></script>', "\n";
 	# print '	<script type="text/javascript" src="'.$DIR.'js/jquery-3.2.0.min.js"></script>', "\n";
-	print '	<script type="text/javascript" src="../../js/script_fitting.js"></script>', "\n";
+	print '	<script type="text/javascript" src="../../js/script_fitting.js?date=20180602"></script>', "\n";
 	print '	<script type="text/javascript" src="../../js/script_article.js"></script>', "\n";
 	print '	<script type="text/javascript" src="../../js/script_toggle.js"></script>', "\n";
 print <<'EOM';
