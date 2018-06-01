@@ -109,7 +109,7 @@ print <<'EOM';
 	<!--<link href="./css/navi.css" type="text/css" rel="stylesheet">-->
 EOM
 	print '	<link href="'.$DIR.'css/style_default.css?date=20180501" type="text/css" rel="stylesheet">', "\n";
-	print '	<link href="./css/style_blog.css?date=20180427" type="text/css" rel="stylesheet">', "\n";
+	print '	<link href="./css/style_blog.css?date=20180602" type="text/css" rel="stylesheet">', "\n";
 	print '	<link href="./css/style_blog_home.css?date=20180427" type="text/css" rel="stylesheet">', "\n";
 	print '	<link rel="shortcut icon" href="'.$DIR.'img/favicon.ico" type="image/vnd.microsoft.icon">', "\n";
 	print '	<script type="text/javascript" src="'.$DIR.'js/jquery-1.11.2.min.js"></script>', "\n";

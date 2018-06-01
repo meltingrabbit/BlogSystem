@@ -136,10 +136,10 @@ nav {
 #sideMenu > div#tagList {
 	margin: 0;
 	margin-top: 4px; /* aのpadding-topと足して10px（#sideMenu a のpadding-topと同じ） */
-	padding: 0 7px;		/* marginと足して10pxにする */
+	padding: 0 8px;		/* marginと足して10pxにする */
 }
 #sideMenu > div#tagList a {
-	margin: 0 3px;
+	margin: 0 2px;
 	padding-left: 5px;
 	padding-right: 5px;
 	font-size: 12px;
