@@ -17,6 +17,7 @@ sub GetSetting {
 		2018022702,
 		2018032302,
 		2017122401,
+		2018020101,
 		2018010601,
 		2017120201,
 		2017091703
@@ -83,6 +84,7 @@ sub GetSetting {
 	$TAG{'t_camera'    } = 'カメラ';
 	$TAG{'t_photo'     } = '写真';
 	$TAG{'t_optics'    } = '光学';
+	$TAG{'t_ieServer'  } = '自宅サーバー';
 	$TAG{'t_font'      } = 'Font';
 	$TAG{'t_jaxa'      } = 'JAXA';
 	$TAG{'t_rocket'    } = 'ロケット';
@@ -130,6 +132,7 @@ sub GetSetting {
 					{'code' => 't_camera'     ,'num' => 0},
 					{'code' => 't_photo'      ,'num' => 0},
 					{'code' => 't_optics'     ,'num' => 0},
+					{'code' => 't_ieServer'   ,'num' => 0},
 					{'code' => 't_font'       ,'num' => 0},
 					{'code' => 't_jaxa'       ,'num' => 0},
 					{'code' => 't_rocket'     ,'num' => 0},
