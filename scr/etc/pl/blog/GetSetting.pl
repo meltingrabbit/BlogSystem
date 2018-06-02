@@ -94,6 +94,7 @@ sub GetSetting {
 	$TAG{'t_labProject'} = '研究室プロジェクト';
 	$TAG{'t_study'     } = '研究';
 	$TAG{'t_thinking'  } = '思考';
+	$TAG{'t_slide'     } = 'スライド';
 	$TAG{'t_empty'     } = '内容が無い';
 	$TAG{'t_null'      } = 'タグなし';
 
@@ -142,6 +143,7 @@ sub GetSetting {
 					{'code' => 't_labProject' ,'num' => 0},
 					{'code' => 't_study'      ,'num' => 0},
 					{'code' => 't_thinking'   ,'num' => 0},
+					{'code' => 't_slide'      ,'num' => 0},
 					{'code' => 't_empty'      ,'num' => 0},
 					{'code' => 't_null'       ,'num' => 0});
 
