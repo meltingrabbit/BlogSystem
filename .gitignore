@@ -1,5 +1,5 @@
 コミット前の注意.txt
-/scr/etc/pl/OutputFlie.pl
-/scr/etc/pl/RecordAccessLog.pl
-/scr/html/blog/cgi/output_comment.cgi
+/src/etc/pl/OutputFlie.pl
+/src/etc/pl/RecordAccessLog.pl
+/src/html/blog/cgi/output_comment.cgi
 
