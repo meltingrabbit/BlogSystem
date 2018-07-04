@@ -39,7 +39,7 @@ sub GenerateArticle {
 	my $month = $ArticleLists[$ID2IDX{$id}]{'month'}               ;
 	my $day   = $ArticleLists[$ID2IDX{$id}]{'day'}                 ;
 	my $isMR  = $ArticleLists[$ID2IDX{$id}]{'metaRobots'}          ;
-	my $url   = 'http://meltingrabbit.dip.jp/blog/article/'.$id.'/';
+	my $url   = $SETTING{'HOST_URL'}.'blog/article/'.$id.'/';
 	my $desc  = $ArticleLists[$ID2IDX{$id}]{'text'}                ;
 
 	$desc = &sub::EscapeHtml($desc);

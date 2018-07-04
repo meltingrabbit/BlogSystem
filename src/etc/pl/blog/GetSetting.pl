@@ -10,6 +10,8 @@ sub GetSetting {
 	$SETTING{'begin_year'} = 2016;
 	$SETTING{'end_year'} = 2018;
 
+	$SETTING{'HOST_URL'} = 'https://meltingrabbit.com/';
+
 	$SETTING{'popular_articles'} = [			# 人気記事一覧（Todo : 動的に作るように）
 		2017121801,
 		2017041301,
