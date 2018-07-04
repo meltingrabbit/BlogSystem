@@ -206,8 +206,9 @@ google検索の記事タイトルが，h2のものが現れたため．
 	margin-right: auto !important;
 	margin-left: auto !important;
 }
-#contents > img + p {
-	margin-top: 30px;
+#contents > img + p,
+#contents > img + table {
+	margin-top: 30px !important;
 }
 #contents > div.syntaxhighlighter + p,
 #contents > div.syntaxhighlighter + table {
