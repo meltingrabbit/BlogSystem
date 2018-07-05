@@ -78,20 +78,22 @@ print <<'EOM';
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 EOM
+	my $title  = '';
 	if ($class eq 'tag') {
-		print '	<title>溶けかけてるうさぎ - BLOG - TAG '.$SETTING{'tag'}{$target}.'</title>', "\n";
+		$title  = '溶けかけてるうさぎ - BLOG - TAG '.$SETTING{'tag'}{$target};
 	} elsif ($class eq 'category') {
-		print '	<title>溶けかけてるうさぎ - BLOG - CATEGORY '.$SETTING{'category'}{$target}.'</title>', "\n";
+		$title  = '溶けかけてるうさぎ - BLOG - CATEGORY '.$SETTING{'category'}{$target};
 	} elsif ($class eq 'archive') {
-		print '	<title>溶けかけてるうさぎ - BLOG - ARCHIVE '.$target.'</title>', "\n";
+		$title  = '溶けかけてるうさぎ - BLOG - ARCHIVE '.$target;
 	} else {
 		if ($target eq 'popular') {
-			print '	<title>溶けかけてるうさぎ - BLOG - POPULAR ARTICLES</title>', "\n";
+			$title  = '溶けかけてるうさぎ - BLOG - POPULAR ARTICLES';
 			$isDisplayButton = 0;
 		} else {
-			print '	<title>溶けかけてるうさぎ - BLOG</title>', "\n";
+			$title  = '溶けかけてるうさぎ - BLOG';
 		}
 	}
+	print '	<title>'.$title.'</title>', "\n";
 print <<'EOM';
 	<meta name="format-detection" content="telephone=no">
 EOM
@@ -105,6 +107,23 @@ print <<'EOM';
 	-->
 	<!--<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">-->
 	<meta name="viewport" content="width=device-width,user-scalable=yes">
+
+EOM
+	my $OGP_title  = $title;
+	my $OGP_dscrpt = '備忘録．内容は趣味だったり，旅行だったり．たまにアカデミックなことも．備忘録なので，日付はその話題が起きた日になっています．つまり，最新記事がトップに来るとは限りません．';
+	print '	<meta name="twitter:card" content="summary">', "\n";
+	print '	<meta name="twitter:site" content="@_meltingrabbit">', "\n";
+	print '	<meta name="twitter:creator" content="@_meltingrabbit">', "\n";
+	print '	<meta name="twitter:title" content="'.$OGP_title.'">', "\n";
+	print '	<meta name="twitter:description" content="'.$OGP_dscrpt.'">', "\n";
+	print '	<meta name="twitter:image" content="'.$SETTING{'HOST_URL'}.'img/icon_WB.png">', "\n";
+	print '	<meta property="og:title" content="'.$OGP_title.'">', "\n";
+	print '	<meta property="og:url" content="'.$SETTING{'HOST_URL'}.'blog/">', "\n";
+	print '	<meta property="og:image" content="'.$SETTING{'HOST_URL'}.'img/icon_WB.png">', "\n";
+	print '	<meta property="og:site_name" content="溶けかけてるうさぎ - BLOG">', "\n";
+	print '	<meta property="og:description" content="'.$OGP_dscrpt.'">', "\n";
+print <<'EOM';
+
 	<!--<link href="./css/style_article.css" type="text/css" rel="stylesheet">-->
 	<!--<link href="./css/navi.css" type="text/css" rel="stylesheet">-->
 EOM

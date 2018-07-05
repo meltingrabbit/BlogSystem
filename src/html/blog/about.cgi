@@ -52,6 +52,19 @@ print <<'EOM';
 	-->
 	<!--<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">-->
 	<meta name="viewport" content="width=device-width,user-scalable=yes">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@_meltingrabbit">
+	<meta name="twitter:creator" content="@_meltingrabbit">
+	<meta name="twitter:title" content="溶けかけてるうさぎ - BLOG - ABOUT">
+	<meta name="twitter:description" content="備忘録．内容は趣味だったり，旅行だったり．たまにアカデミックなことも．備忘録なので，日付はその話題が起きた日になっています．つまり，最新記事がトップに来るとは限りません．">
+	<meta name="twitter:image" content="https://meltingrabbit.com/img/icon_WB.png">
+	<meta property="og:title" content="溶けかけてるうさぎ - BLOG - ABOUT">
+	<meta property="og:url" content="https://meltingrabbit.com/blog/about.cgi">
+	<meta property="og:image" content="https://meltingrabbit.com/img/icon_WB.png">
+	<meta property="og:site_name" content="溶けかけてるうさぎ - BLOG">
+	<meta property="og:description" content="備忘録．内容は趣味だったり，旅行だったり．たまにアカデミックなことも．備忘録なので，日付はその話題が起きた日になっています．つまり，最新記事がトップに来るとは限りません．">
+
 	<!--<link href="./css/style_article.css" type="text/css" rel="stylesheet">-->
 	<!--<link href="./css/navi.css" type="text/css" rel="stylesheet">-->
 EOM
