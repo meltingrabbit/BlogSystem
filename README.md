@@ -5,5 +5,5 @@ MeltingRabbit Blog System
 2017/03/05から開発をはじめている自作ブログシステム
 
 ## リンク
-http://meltingrabbit.dip.jp/blog/
+https://meltingrabbit.com/blog/
 
