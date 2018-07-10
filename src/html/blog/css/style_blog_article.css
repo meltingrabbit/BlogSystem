@@ -27,7 +27,8 @@
 	border-radius: 3px;
 }
 /* 上記スタイルのキャンセル */
-#contents > #abstract code {
+#contents > #abstract code,
+#contents > #commentDisp code {
 	margin: 0;
 	padding: 0;
 	font-size: 100%;
@@ -370,6 +371,11 @@ div[id^="highlighter"]  {
 
 #contents > #commentDisp {
 	margin-bottom: -10px !important;
+}
+#contents > #commentDisp > img {
+	display: block;
+	margin: 12px auto;
+	/*margin-bottom: 0;*/
 }
 #contents > #commentDisp > p {
 	/*padding-left: 10px;*/
