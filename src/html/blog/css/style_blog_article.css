@@ -27,7 +27,7 @@
 	border-radius: 3px;
 }
 /* 上記スタイルのキャンセル */
-#contents #abstract code {
+#contents > #abstract code {
 	margin: 0;
 	padding: 0;
 	font-size: 100%;
@@ -110,7 +110,7 @@ google検索の記事タイトルが，h2のものが現れたため．
 	padding-right: 3px;
 }
 
-#contents #abstract {
+#contents > #abstract {
 	box-sizing: border-box;
 	width: 100%;
 	background-color: #eee;
@@ -368,8 +368,39 @@ div[id^="highlighter"]  {
 	display: table;
 }
 
+#contents > #commentDisp {
+	margin-bottom: -10px !important;
+}
+#contents > #commentDisp > p {
+	/*padding-left: 10px;*/
+	/*padding-right: 10px;*/
+}
+#contents > #commentDisp > p.comment-disp-h4 {
+	font-size: 13px;
+}
+#contents > #commentDisp > p.comment-disp-h4 > span.comment-disp-name {
+	font-size: 17px;
+	/*font-weight: bolder;*/
+}
+#contents > #commentDisp > p.comment-disp-text {
+	padding-left: 30px;
+}
+/*#contents > #commentDisp > p.comment-disp-text + p.comment-disp-h4 {
+	border-top: 1px solid #ccc;
+	margin-top: 8px;
+	padding-top: 8px;
+}*/
+#contents > #commentDisp > p.comment-disp-bar {
+	border-top: 1px solid #ccc;
+	margin: 0 -12px;
+	display: block;
+	margin-top: 10px;
+	height: 10px;
+}
 
-#contents #comment {
+
+#contents > #commentDisp,
+#contents > #comment {
 	box-sizing: border-box;
 	width: 100%;
 	background-color: #eee;
@@ -380,7 +411,8 @@ div[id^="highlighter"]  {
 	margin-bottom: 30px;
 	/*border: 2px solid #000;*/
 }
-#contents #comment h3 {
+#contents > #commentDisp h3,
+#contents > #comment h3 {
 	font-weight: bold;
 	font-size: 18px;
 	margin-bottom: 15px;
@@ -389,14 +421,15 @@ div[id^="highlighter"]  {
 	margin-top: 5px;
 	border-width: 0;
 }
-#contents #comment p {
+#contents > #commentDisp p,
+#contents > #comment p {
 	padding: 0 3px;
 }
-#contents #comment p span.note {
+#contents > #comment p span.note {
 	font-size: 12px;
 }
-#contents #comment input,
-#contents #comment textarea {
+#contents > #comment input,
+#contents > #comment textarea {
 
 	/*chromeのデフォルト削除*/
 	/* http://webdesignmagazine.net/html-css/google-chrome_outline/ */
@@ -421,16 +454,16 @@ div[id^="highlighter"]  {
 	box-sizing: border-box;
 	width: 100%;
 }
-#contents #comment input:focus,
-#contents #comment textarea:focus,
-#contents #comment .button:hover {
+#contents > #comment input:focus,
+#contents > #comment textarea:focus,
+#contents > #comment .button:hover {
 	border:solid 1px #EEA34A;
 }
 }
-#contents #comment input {
+#contents > #comment input {
 	/*width: 100%;*/
 }
-#contents #comment textarea {
+#contents > #comment textarea {
 	/*width: 100%;*/
 	height: 80px;
 }
@@ -443,7 +476,7 @@ button {
 	padding: 0;
 	appearance: none;
 }
-#contents #comment .button {
+#contents > #comment .button {
 	display: block;
 	cursor: pointer;
 	box-sizing: border-box;

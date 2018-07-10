@@ -105,13 +105,13 @@ print <<'EOM';
 EOM
 	print '	<link href="'.$DIR.'css/style_default.css?date=20180501" type="text/css" rel="stylesheet">', "\n";
 	print '	<link href="../../css/style_blog.css?date=20180602" type="text/css" rel="stylesheet">', "\n";
-	print '	<link href="../../css/style_blog_article.css?date=20180703" type="text/css" rel="stylesheet">', "\n";
+	print '	<link href="../../css/style_blog_article.css?date=20180710" type="text/css" rel="stylesheet">', "\n";
 	print '	<link href="./style.css" type="text/css" rel="stylesheet">', "\n";
 	print '	<link rel="shortcut icon" href="'.$DIR.'img/favicon.ico" type="image/vnd.microsoft.icon">', "\n";
 	print '	<script type="text/javascript" src="'.$DIR.'js/jquery-1.11.2.min.js"></script>', "\n";
 	# print '	<script type="text/javascript" src="'.$DIR.'js/jquery-3.2.0.min.js"></script>', "\n";
 	print '	<script type="text/javascript" src="../../js/script_fitting.js?date=20180602"></script>', "\n";
-	print '	<script type="text/javascript" src="../../js/script_article.js"></script>', "\n";
+	print '	<script type="text/javascript" src="../../js/script_article.js?date=20180702"></script>', "\n";
 	print '	<script type="text/javascript" src="../../js/script_toggle.js"></script>', "\n";
 print <<'EOM';
 
@@ -202,6 +202,24 @@ EOM
 	# print encode('utf-8', $article);
 	# print utf8::is_utf8($article) ? 'flagged' : 'no flag';
 	# Wide character in print at エラーが出るねぇ．（実効には問題がないのだが，Apacheのerrorログが出まくる．）
+
+	# print $#Comment;
+	# コメント
+	if ($#Comment >= 0) {
+	# if (0) {
+		print '	<div id="commentDisp">', "\n";
+		print '		<h3>コメント</h3>', "\n";
+		for (my $i=0; $i<=$#Comment; $i++) {
+			print '		<p class="comment-disp-h4"><span class="comment-disp-name">'.$Comment[$i]->{'name'}.'</span> &nbsp;&nbsp;['.$Comment[$i]->{'date'}.']</p>', "\n";
+			foreach(@{$Comment[$i]->{'text'}}) {
+				print '		<p class="comment-disp-text">'.$_.'</p>', "\n";
+			}
+			last if ($i == $#Comment);
+			print '		<p class="comment-disp-bar">&nbsp;</p>', "\n";
+		}
+		print '	</div>', "\n";
+	}
+
 print <<'EOM';
 
 	<div id="comment">
