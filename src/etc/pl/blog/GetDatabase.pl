@@ -3,7 +3,7 @@ use utf8;
 package sub::blog;
 sub GetDatabase {
 
-	my $DATABASE_PATH = '***********/etc/setting/blog/articleDatabase.dat';
+	my $DATABASE_PATH = '**********/etc/setting/blog/articleDatabase.dat';
 
 	my @ArticleLists;		# 記事リスト
 	my %ID2IDX;				# 記事リストをIDから逆引き出来るようにするハッシュ
