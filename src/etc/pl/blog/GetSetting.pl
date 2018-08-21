@@ -59,6 +59,7 @@ sub GetSetting {
 	$TAG{'t_js'        } = 'JavaScript';
 	$TAG{'t_html'      } = 'HTML';
 	$TAG{'t_css'       } = 'CSS';
+	$TAG{'t_RoR'       } = 'Ruby on Rails';
 	$TAG{'t_md'        } = 'Markdown';
 	$TAG{'t_bat'       } = 'Batch File';
 	$TAG{'t_server'    } = 'サーバー';
@@ -108,6 +109,7 @@ sub GetSetting {
 					{'code' => 't_js'         ,'num' => 0},
 					{'code' => 't_html'       ,'num' => 0},
 					{'code' => 't_css'        ,'num' => 0},
+					{'code' => 't_RoR'        ,'num' => 0},
 					{'code' => 't_md'         ,'num' => 0},
 					{'code' => 't_bat'        ,'num' => 0},
 					{'code' => 't_server'     ,'num' => 0},

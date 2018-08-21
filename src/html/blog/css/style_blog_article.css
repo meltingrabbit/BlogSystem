@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
 
 #contents {
 	padding: 13px;
@@ -441,7 +442,8 @@ div[id^="highlighter"]  {
 	/* http://webdesignmagazine.net/html-css/google-chrome_outline/ */
 	outline: none;
 
-	font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Verdana, "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
+	/*font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Verdana, "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;*/
+	font-family: 'Noto Sans JP', "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
 
 	border:0;
 	padding:4px;
@@ -474,7 +476,8 @@ div[id^="highlighter"]  {
 	height: 80px;
 }
 button {
-	font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Verdana, "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
+	/*font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Verdana, "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;*/
+	font-family: 'Noto Sans JP', "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
