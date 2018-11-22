@@ -197,6 +197,11 @@ google検索の記事タイトルが，h2のものが現れたため．
 	width: auto;
 	height: 600px;
 }
+#contents > img.square {
+	/*width: 20px;*/
+	width: 500px;
+	height: auto;
+}
 #contents > p {
 	padding: 0 10px;
 }
