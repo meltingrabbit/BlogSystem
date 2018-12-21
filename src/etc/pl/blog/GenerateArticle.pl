@@ -103,16 +103,17 @@ print <<'EOM';
 	<!--<link href="./css/style_article.css" type="text/css" rel="stylesheet">-->
 	<!--<link href="./css/navi.css" type="text/css" rel="stylesheet">-->
 EOM
-	print '	<link href="'.$DIR.'css/style_default.css?date=20181121" type="text/css" rel="stylesheet">', "\n";
-	print '	<link href="../../css/style_blog.css?date=20180602" type="text/css" rel="stylesheet">', "\n";
-	print '	<link href="../../css/style_blog_article.css?date=20181121" type="text/css" rel="stylesheet">', "\n";
+	print '	<link href="'.$DIR.'css/style_default.css?date=20181221" type="text/css" rel="stylesheet">', "\n";
+	print '	<link href="../../css/style_blog.css?date=20181221" type="text/css" rel="stylesheet">', "\n";
+	print '	<link href="../../css/style_blog_article.css?date=20181221" type="text/css" rel="stylesheet">', "\n";
 	print '	<link href="./style.css" type="text/css" rel="stylesheet">', "\n";
 	print '	<link rel="shortcut icon" href="'.$DIR.'img/favicon.ico" type="image/vnd.microsoft.icon">', "\n";
 	print '	<script type="text/javascript" src="'.$DIR.'js/jquery-1.11.2.min.js"></script>', "\n";
 	# print '	<script type="text/javascript" src="'.$DIR.'js/jquery-3.2.0.min.js"></script>', "\n";
-	print '	<script type="text/javascript" src="../../js/script_fitting.js?date=20180602"></script>', "\n";
-	print '	<script type="text/javascript" src="../../js/script_article.js?date=20180702"></script>', "\n";
-	print '	<script type="text/javascript" src="../../js/script_toggle.js"></script>', "\n";
+	print '	<script type="text/javascript" src="../../js/script_common.js?date=20181221"></script>', "\n";
+	print '	<script type="text/javascript" src="../../js/script_fitting.js?date=20181221"></script>', "\n";
+	print '	<script type="text/javascript" src="../../js/script_article.js?date=20181221"></script>', "\n";
+	print '	<script type="text/javascript" src="../../js/script_toggle.js?date=20181221"></script>', "\n";
 print <<'EOM';
 
 

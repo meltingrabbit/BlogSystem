@@ -128,6 +128,48 @@ nav {
 #sideMenu > div#fixedContents {
 	width: 260px;
 }
+
+/* 年/月の部分 */
+#sideMenu > div.archive-div {
+	margin: 0 10px;
+	padding: 0;
+	/*border-bottom: 1px solid #ddd;*/
+}
+#sideMenu > div.archive-div > div.month-toggle-trigger {
+	/*display: inline-block;*/
+	display: block;
+	box-sizing: border-box;
+	float: left;
+	cursor : pointer;
+	/*display: inline;*/
+	background-color: inherit;
+	font-size: 13px;
+	margin: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	line-height: 1.3;
+	color: inherit;
+}
+#sideMenu > div.archive-div > a.archive-year {
+	/*display: inline-block;*/
+	display: block;
+	margin: 0;
+	margin-left: 18px;
+	width: auto;
+}
+#sideMenu > div.archive-div > div.archive-toggle-area {
+	margin: 0;
+	padding: 0;
+	display: none;
+}
+#sideMenu a.archive-year-month {
+	font-size: 12px;
+	margin: 0;
+	margin-left: 30px;
+}
+
 #sideMenu > div#fixedContents.fixed {
 	position: fixed;
 	top: 0;

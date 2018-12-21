@@ -4,8 +4,8 @@ package sub::blog;
 sub GetSetting {
 
 	my %SETTING;
-	$SETTING{'row'} = 10;						# 1ページに表示する記事数
-	$SETTING{'recent_num_at_list'} = 20;		# サイドメニュー最新記事表示数 at list
+	$SETTING{'row'} = 15;						# 1ページに表示する記事数
+	$SETTING{'recent_num_at_list'} = 15;		# サイドメニュー最新記事表示数 at list
 	$SETTING{'recent_num_at_article'} = 5;		# サイドメニュー最新記事表示数 at article
 	$SETTING{'begin_year'} = 2016;
 	$SETTING{'end_year'} = 2018;
@@ -15,13 +15,14 @@ sub GetSetting {
 	$SETTING{'popular_articles'} = [			# 人気記事一覧（Todo : 動的に作るように）
 		2017121801,
 		2017041301,
-		2018010901,
-		2018022702,
+		2018052402,
+		2018081901,
 		2018032302,
+		2018010901,
 		2017122401,
 		2018020101,
 		2018010601,
-		2017120201,
+		# 2017120201,
 		2017091703
 	];
 
@@ -88,6 +89,8 @@ sub GetSetting {
 	$TAG{'t_photo'     } = '写真';
 	$TAG{'t_optics'    } = '光学';
 	$TAG{'t_ieServer'  } = '自宅サーバー';
+	$TAG{'t_hardware'  } = 'ハードウェア';
+	$TAG{'t_robot'     } = 'ロボット';
 	$TAG{'t_font'      } = 'Font';
 	$TAG{'t_jaxa'      } = 'JAXA';
 	$TAG{'t_rocket'    } = 'ロケット';
@@ -138,6 +141,8 @@ sub GetSetting {
 					{'code' => 't_photo'      ,'num' => 0},
 					{'code' => 't_optics'     ,'num' => 0},
 					{'code' => 't_ieServer'   ,'num' => 0},
+					{'code' => 't_hardware'   ,'num' => 0},
+					{'code' => 't_robot'      ,'num' => 0},
 					{'code' => 't_font'       ,'num' => 0},
 					{'code' => 't_jaxa'       ,'num' => 0},
 					{'code' => 't_rocket'     ,'num' => 0},

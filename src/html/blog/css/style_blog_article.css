@@ -347,6 +347,45 @@ div[id^="highlighter"]  {
 	min-width: 35px;
 }
 
+
+/* Qiitaみたいな，表感あふれるテーブル */
+#contents div.graphical-table-wrapper {
+	text-align: center;    /* 中央揃えのため */
+}
+#contents table.graphical {
+	margin: 0 auto;
+	display: inline-block;    /* 中央揃えのため */
+	overflow: auto;
+	margin: 1.5em 0;
+	/*border-left: 1px solid #ddd;*/
+	/*border: 1px solid #ddd;*/
+	border-collapse: collapse;
+}
+#contents table.graphical tr {
+	/*display: table-row;*/
+	vertical-align: inherit;
+	border-color: inherit;
+}
+#contents table.graphical tr:first-child {
+	background-color: #eee;
+	/*font-weight: bolder;*/
+}
+#contents table.graphical th {
+	/*display: table-cell;*/
+	vertical-align: inherit;
+}
+#contents table.graphical td {
+	display: table-cell;
+	border: 1px solid #ddd;
+	padding: 1px 5px;
+	text-align: center;
+	vertical-align: middle;
+}
+#contents table.graphical td:first-child {
+	padding: 1px 10px;
+	/*font-weight: bolder;*/
+}
+
 /* twitter引用用 */
 #contents div.my-twitter {
 	width: 100%;

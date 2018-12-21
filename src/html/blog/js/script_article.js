@@ -15,10 +15,9 @@ $(function() {
 	// AddSidemenu(h2Texts);
 	AddSidemenu(h2h3Texts);
 
-
 	// これは文字などの挿入がすべて終わったら実行
 	SetCrossReference();
-
+	Fitting();
 
 
 	FixSidemenu();

@@ -28,6 +28,11 @@ sub GenerateList {
 	# ページ遷移ボタンを表示するか？
 	my $isDisplayButton = 1;
 
+	# archiveにおいて，月かどうか？
+	my $flagYearMonth = 0;
+	my $year  = 0;		# archive用
+	my $month = 0;		# archive用
+
 
 	########################################
 	# 不正な引数を弾く
@@ -52,8 +57,27 @@ sub GenerateList {
 		my $BEGIN_YEAR = $SETTING{'begin_year'};
 		my $END_YEAR = $SETTING{'end_year'};
 		my $flag = 0;
+		if ($target > 100000) {
+			$flagYearMonth = 1;
+			$year  = int($target / 100);
+			$month = int($target % 100);
+			for (my $i = 1; $i <= 12; $i++) {
+				if ($month == $i) {
+					$flag = 1;
+					last;
+				}
+			}
+			if ($flag == 0) {
+				print 'Location: ./', "\n\n";
+				exit;
+			}
+			$month = ($month < 10) ? '0'.$month : $month;
+			$flag = 0;
+		} else {
+			$year = $target;
+		}
 		for (my $i = $BEGIN_YEAR; $i <= $END_YEAR; $i++) {
-			if ($target eq $i) {
+			if ($year eq $i) {
 				$flag = 1;
 				last;
 			}
@@ -84,7 +108,11 @@ EOM
 	} elsif ($class eq 'category') {
 		$title  = '溶けかけてるうさぎ - BLOG - CATEGORY '.$SETTING{'category'}{$target};
 	} elsif ($class eq 'archive') {
-		$title  = '溶けかけてるうさぎ - BLOG - ARCHIVE '.$target;
+		if ($flagYearMonth == 0) {
+			$title  = '溶けかけてるうさぎ - BLOG - ARCHIVE '.$year;
+		} else {
+			$title  = '溶けかけてるうさぎ - BLOG - ARCHIVE '.$year.'/'.$month;
+		}
 	} else {
 		if ($target eq 'popular') {
 			$title  = '溶けかけてるうさぎ - BLOG - POPULAR ARTICLES';
@@ -127,14 +155,15 @@ print <<'EOM';
 	<!--<link href="./css/style_article.css" type="text/css" rel="stylesheet">-->
 	<!--<link href="./css/navi.css" type="text/css" rel="stylesheet">-->
 EOM
-	print '	<link href="'.$DIR.'css/style_default.css?date=20180821" type="text/css" rel="stylesheet">', "\n";
-	print '	<link href="./css/style_blog.css?date=20180602" type="text/css" rel="stylesheet">', "\n";
-	print '	<link href="./css/style_blog_home.css?date=20180427" type="text/css" rel="stylesheet">', "\n";
+	print '	<link href="'.$DIR.'css/style_default.css?date=20181221" type="text/css" rel="stylesheet">', "\n";
+	print '	<link href="./css/style_blog.css?date=20181221" type="text/css" rel="stylesheet">', "\n";
+	print '	<link href="./css/style_blog_home.css?date=20181221" type="text/css" rel="stylesheet">', "\n";
 	print '	<link rel="shortcut icon" href="'.$DIR.'img/favicon.ico" type="image/vnd.microsoft.icon">', "\n";
 	print '	<script type="text/javascript" src="'.$DIR.'js/jquery-1.11.2.min.js"></script>', "\n";
-	print '	<script type="text/javascript" src="./js/script_fitting.js?date=20180602"></script>', "\n";
-	print '	<script type="text/javascript" src="./js/script_toggle.js"></script>', "\n";
 	# print '	<script type="text/javascript" src="'.$DIR.'js/script_home.js"></script>', "\n";
+	print '	<script type="text/javascript" src="./js/script_common.js?date=20181221"></script>', "\n";
+	print '	<script type="text/javascript" src="./js/script_fitting.js?date=20181221"></script>', "\n";
+	print '	<script type="text/javascript" src="./js/script_toggle.js?date=20181221"></script>', "\n";
 print <<'EOM';
 
 	<!-- ページ内移動をスムーズに -->
@@ -207,9 +236,16 @@ EOM
 		}
 	} elsif ($class eq 'archive') {
 		foreach (@ArticleLists) {
-			if (${$_}{'year'} eq $target) {
-				# print 1;
-				$ArticleListsSelected[$#ArticleListsSelected + 1] = $_;
+			if ($flagYearMonth == 0) {
+				if (${$_}{'year'} eq $year) {
+					# print 1;
+					$ArticleListsSelected[$#ArticleListsSelected + 1] = $_;
+				}
+			} else {
+				if (${$_}{'year'} eq $year && ${$_}{'month'} eq $month) {
+					# print 1;
+					$ArticleListsSelected[$#ArticleListsSelected + 1] = $_;
+				}
 			}
 		}
 	} else {
@@ -278,7 +314,11 @@ EOM
 	} elsif ($class eq 'category') {
 		print '<h2>「'.$SETTING{'category'}{$target}.'」 CATEGORY 一覧</h2>', "\n";
 	} elsif ($class eq 'archive') {
-		print '<h2>ARCHIVE '.$target.'</h2>', "\n";
+		if ($flagYearMonth == 0) {
+			print '<h2>ARCHIVE '.$year.'</h2>', "\n";
+		} else {
+			print '<h2>ARCHIVE '.$year.'/'.$month.'</h2>', "\n";
+		}
 	} else {
 		if ($target eq 'popular') {
 			print '<h2>POPULAR ARTICLES</h2>', "\n";

@@ -1,4 +1,7 @@
-(function() {
+// script_article.js から読み込ませるために，無名関数化しない
+
+
+// (function() {
 
 $(function() {
 
@@ -79,7 +82,7 @@ function Fitting() {
 	deltaContentsWidth -= ddelta;
 	deltaSideMenuWidth += ddelta;
 
-
+	// return;
 	// console.log("deltaWidth : " + deltaWidth);
 
 	$('nav>div'                     ).css('width', (defaultNavWidth           + deltaWidth        )+"px");
@@ -91,4 +94,4 @@ function Fitting() {
 	$('#sideMenu>div#fixedContents' ).css('width', (defaultFixedContentsWidth + deltaSideMenuWidth)+"px");
 }
 
-})();
+// })();
